@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-font-family;
+  font-size: pxToRem(16);
+  color: $color-text;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: inline-block;
+  vertical-align: text-bottom;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: pxToRem(34);
+}
+
+h2 {
+  font-size: pxToRem(32);
+}
+
+@include media-query($mobile-large) {
+  p {
+    line-height: 1.5;
+  }
+
+  body {
+    font-size: pxToRem(14);
+  }
+
+  h1 {
+    font-size: pxToRem(24);
+  }
+
+  h2 {
+    font-size: pxToRem(22);
+  }
+}

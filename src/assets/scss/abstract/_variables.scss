@@ -1,0 +1,51 @@
+// COLORS
+$color-primary: #daf1e7;
+$color-secondary: #49b587;
+
+$dark-green: #07432a;
+$light-green: #cde7dc;
+$greyish-green: #708d81;
+
+$color-text: #000;
+
+//GREY COLORS
+$pure-white: #ffffff;
+$gray-light: #e5e5e5;
+
+// TYPOGRAPHY
+
+$main-font-family: 'Jacques Francois', sans-serif;
+$secondary-font-family: 'Istok Web', sans-serif;
+
+// UTILITIES
+
+$max-width: pxToRem(1440);
+
+// PLACEHOLDERS SELECTOR
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-column-centralize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-row-centralize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// MEDIA-QUERY
+
+$laptop: 90em; // 1440px
+$laptop-medium: 64em; // 1024px
+$tablet: 48em; //768px
+$mobile-large: 26.563em; //425px
+$mobile-medium: 23.438em; //375px
+$mobile-small: 20em; //320px
