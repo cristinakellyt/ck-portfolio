@@ -1,7 +1,7 @@
 <template>
   <header>
-    <base-width class="header">
-      <h1 class="header-logo">Cristina Kelly</h1>
+    <base-width class="header-desktop">
+      <h1 class="header-desktop--logo">Cristina Kelly</h1>
 
       <nav v-if="screenSizeStore.isDesktop">
         <ul class="navigation-list">
@@ -37,20 +37,18 @@ const screenSizeStore = useScreenSizeStore()
 header {
   background-color: $color-primary;
   width: 100%;
-  position: fixed;
 }
 
-.header {
+.header-desktop {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: pxToRem(15);
 
-  &-logo {
+  &--logo {
     font-family: 'Italianno', sans-serif;
     font-size: pxToRem(40);
     font-weight: 400;
-    z-index: 1000;
   }
 
   .navigation-list {
@@ -66,7 +64,7 @@ header {
 
       &:hover {
         .hover-effect {
-          left: 0%;
+          left: 0;
           width: 100%;
           opacity: 1;
         }
@@ -87,22 +85,29 @@ header {
       height: pxToRem(2);
       background-color: $color-secondary;
       position: absolute;
-      bottom: 0%;
+      bottom: -5px;
       left: 50%;
 
       transition: all 0.3s ease;
     }
 
     &:hover::after {
-      left: 0%;
+      left: 0;
       width: 100%;
     }
   }
 }
 
 @include media-query($tablet) {
-  .header {
-    justify-content: space-between;
+  .header-desktop {
+    position: fixed;
+    z-index: 1000;
+    background-color: $color-primary;
+    width: 100%;
+
+    &--logo {
+      z-index: 1000;
+    }
   }
 }
 

@@ -26,6 +26,7 @@ import { ref } from 'vue'
 const isMenuOpen = ref(false)
 
 const onToggleMenu = () => {
+  console.log('clicked')
   isMenuOpen.value = !isMenuOpen.value
 }
 </script>
@@ -37,7 +38,6 @@ const onToggleMenu = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
 
   .menu-icon {
     cursor: pointer;
@@ -88,6 +88,7 @@ const onToggleMenu = () => {
     }
   }
 }
+
 .slide-enter-active,
 .slide-leave-active {
   transition: all 0.5s ease;
