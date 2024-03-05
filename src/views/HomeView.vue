@@ -1,5 +1,9 @@
 <template>
   <main>
-    <h1>First setup</h1>
+    <TheHero />
   </main>
 </template>
+
+<script setup lang="ts">
+import TheHero from '@/components/TheHero.vue'
+</script>
