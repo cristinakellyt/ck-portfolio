@@ -4,6 +4,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import BaseWidth from '@/components/common/BaseWidth.vue'
 import SectionHeader from '@/components/common/SectionHeader.vue'
+import BaseButton from '@/components/common/BaseButton.vue'
 
 import App from './App.vue'
 import router from './router'
@@ -15,5 +16,6 @@ app.use(router)
 
 app.component('base-width', BaseWidth)
 app.component('section-header', SectionHeader)
+app.component('base-button', BaseButton)
 
 app.mount('#app')

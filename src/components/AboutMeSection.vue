@@ -1,3 +1,4 @@
+import BaseButton from './common/BaseButton.vue';
 <template>
   <section class="about-section" id="about-me">
     <base-width>
@@ -39,7 +40,7 @@
         </div>
       </div>
       <div class="button">
-        <button>Download CV</button>
+        <base-button> Download CV </base-button>
       </div>
     </base-width>
   </section>
@@ -69,7 +70,6 @@
 
   img {
     position: relative;
-
     z-index: 1;
   }
 
@@ -77,10 +77,10 @@
     content: '';
     height: 100%;
     width: 100%;
-    border: 4px solid $dark-green;
+    border: pxToRem(4) solid $dark-green;
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: pxToRem(-15);
+    right: pxToRem(-15);
   }
 }
 
@@ -90,25 +90,21 @@
   background-color: $light-green;
   padding: pxToRem(15);
   border-radius: pxToRem(5);
-  box-shadow: 4px 4px 18.5px rgba(#000, 0.25);
+  box-shadow: $default-box-shadow;
 }
 
 .button {
   text-align: end;
-  display: block;
-  margin-top: 40px;
-}
+  margin-top: pxToRem(40);
+  transition: all 0.2s ease-in;
 
-button {
-  border: 1px solid $dark-green;
-  padding: pxToRem(8) pxToRem(10);
-  color: $dark-green;
-  font-weight: 500;
-  background-color: $light-green;
-  border-radius: pxToRem(5);
-  box-shadow: 0 pxToRem(2) pxToRem(0) 0 $greyish-green;
-  font-size: inherit;
-  cursor: pointer;
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 @include media-query($laptop-medium) {
@@ -129,6 +125,10 @@ button {
 
   .about-section--image {
     width: pxToRem(250);
+  }
+
+  .button {
+    text-align: center;
   }
 }
 </style>
