@@ -1,10 +1,10 @@
 <template>
   <section class="about-section" id="about-me">
     <base-width>
-      <div class="section-header">
-        <p>About</p>
-        <h1>Who is Cristina Kelly?</h1>
-      </div>
+      <section-header>
+        <template v-slot:heading> About </template>
+        <template v-slot:subheading> Who is Cristina Kelly? </template>
+      </section-header>
 
       <div class="about-section--container">
         <div class="about-section--image">
@@ -91,22 +91,6 @@
   padding: pxToRem(15);
   border-radius: pxToRem(5);
   box-shadow: 4px 4px 18.5px rgba(#000, 0.25);
-}
-
-.section-header {
-  p {
-    font-style: italic;
-    font-weight: bold;
-    font-family: $secondary-font-family;
-    font-size: pxToRem(13);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    color: $dark-green;
-    font-weight: 500;
-  }
 }
 
 .button {
