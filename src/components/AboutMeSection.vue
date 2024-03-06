@@ -11,7 +11,7 @@ import BaseButton from './common/BaseButton.vue';
         <div class="about-section--image">
           <img src="@/assets/images/cristina-img.jpeg" alt="Cristina's photo" />
         </div>
-        <div class="about-section--text">
+        <base-card class="about-section--text">
           <p>
             From Brazil and with a pharmacist brazilian degree, I found my passion for web
             development when I moved to the Netherlands three years ago, I've immersed myself in the
@@ -37,7 +37,7 @@ import BaseButton from './common/BaseButton.vue';
             that love a challenge, I'd love to connect! I'm always up for a chat and eager to
             explore how I can contribute to your team. Let's build something great together!
           </p>
-        </div>
+        </base-card>
       </div>
       <div class="button">
         <base-button> Download CV </base-button>
@@ -87,10 +87,6 @@ import BaseButton from './common/BaseButton.vue';
 .about-section--text {
   flex: 0 1 70%;
   text-align: justify;
-  background-color: $light-green;
-  padding: pxToRem(15);
-  border-radius: pxToRem(5);
-  box-shadow: $default-box-shadow;
 }
 
 .button {
