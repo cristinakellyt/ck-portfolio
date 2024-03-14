@@ -1,9 +1,16 @@
 <template>
   <div class="section-header">
-    <p><slot name="heading"></slot></p>
-    <h1><slot name="subheading"></slot></h1>
+    <p :class="`${headingColor}`"><slot name="heading"></slot></p>
+    <h1 :class="`${subHeadingColor}`"><slot name="subheading"></slot></h1>
   </div>
 </template>
+
+<script setup lang="ts">
+defineProps({
+  headingColor: { type: String, default: 'color-text' },
+  subHeadingColor: { type: String, default: 'color-text' }
+})
+</script>
 
 <style scoped lang="scss">
 @import '@/assets/scss/main.scss';
@@ -21,6 +28,18 @@
   h1 {
     color: $dark-green;
     font-weight: 500;
+  }
+
+  .primary {
+    color: $color-primary;
+  }
+
+  .white {
+    color: $pure-white;
+  }
+
+  .color-text {
+    color: $color-text;
   }
 }
 
