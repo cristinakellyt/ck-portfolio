@@ -10,36 +10,36 @@
         <div class="contact-page--text">
           <p> Let's make something great together! </p>
           <div class="contact-wrapper">
-            <a href="https://www.linkedin.com/in/cristina-gaiao/">
+            <a href="https://github.com/cristinakellyt">
               <img src="@/assets/icons/github.svg" alt="contact-github" />
             </a>
-            <a href="https://github.com/cristinakellyt">
+            <a href="https://www.linkedin.com/in/cristina-gaiao/">
               <img src="@/assets/icons/linkedin.svg" alt="contact-linkedin" />
             </a>
             
           </div>
         </div>
         <div class="contact-page--form">
-          <form class="form">
+          <form class="form" action="https://formspree.io/f/xwpejjgl" method="POST">
             <div class="form-group">
-              <input class="form-input" id="name" type="text" placeholder="Your name" required />
+              <input class="form-input" id="name" type="text" placeholder="Your name" name="name" required />
               <label class="form-label" for="name"> Your name </label>
             </div>
             <div class="form-group">
-              <input class="form-input" id="email" type="email" placeholder="Your e-mail" required />
+              <input class="form-input" id="email" type="email" placeholder="Your e-mail" name="email" required />
               <label class="form-label" for="email"> Your e-mail </label>
             </div>
             <div class="form-group">
               <textarea class="form-textarea"
-               id="email"
-               type="email"
+               id="message"
                placeholder="Message"
+               name="message"
                required
                rows="5" />
-              <label class="form-label" for="email"> Message </label>
+              <label class="form-label" for="message"> Message </label>
             </div>
             
-            <button type="submit"> Send e-mail</button>
+            <base-button class="submit-button" type="submit"> Send e-mail</base-button>
           </form>
         </div>
       </div>
@@ -54,7 +54,6 @@
 @import '@/assets/scss/main.scss';
 .contact-page {
   padding: pxToRem(100) pxToRem(40);
-  // text-align: center;
   background-color: $color-primary;
 
   .header {
@@ -76,7 +75,6 @@
       display: flex;
       gap: pxToRem(16);
       align-items: center;
-      // justify-content: center;
       margin-top: pxToRem(32);
 
       img {
@@ -147,27 +145,36 @@
           height: auto;
         }
 
-        button {
-          padding: pxToRem(16);
-          background-color: $color-secondary;
-          color: $color-text;
-          border: none;
-          border-radius: 4px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s;
-          box-shadow: pxToRem(4) pxToRem(4) 0 0 rgba(0, 0, 0, 0.322);
-          width: 30%;
-          margin-left: auto;
-
-          &:hover {
-            background-color: $color-secondary-shade;
-            // color: $color-secondary-shade;
-            transform: translateY(-3px);
-          }
+        .submit-button {
+          width: 25%;
+          margin-left: auto
         }
       }
     }
+  }
+}
+
+
+@include media-query($tablet) {
+  .contact-page {
+    
+    
+    .contact-page--content {
+      grid-template-columns: 1fr;
+      gap: pxToRem(48);
+
+      .contact-page--form{
+        .form .submit-button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include media-query($mobile-large) {
+  .contact-page {
+    padding: 0;
   }
 }
 </style>

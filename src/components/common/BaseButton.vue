@@ -23,7 +23,7 @@ button {
   &:hover{
    background-color:$color-secondary-shade;
    color: $pure-white;  
-   transform: translateY(pxToRem(-3));
+   transform: translateY(pxToRem(-2));
   }
 }
 </style>

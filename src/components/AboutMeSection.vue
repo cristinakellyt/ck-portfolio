@@ -9,7 +9,7 @@ import BaseButton from './common/BaseButton.vue';
 
       <div class="about-section--container">
         <div class="about-section--image">
-          <img src="@/assets/images/cristina-img.jpeg" alt="Cristina's photo" />
+          <img src="@/assets/images/cristina-picture.jpg" alt="Cristina's photo" />
         </div>
         <base-card class="about-section--text">
           <p>
@@ -21,26 +21,27 @@ import BaseButton from './common/BaseButton.vue';
             <br />
             <br />
 
-            Right now I am living in Leiden - The Netherlands, and working as a freelancer, where I
-            have the freedom to bring my clients' ideas to life through code. Whether it's crafting
-            sleek websites, optimizing user experiences, or solving complex technical challenges, I
-            thrive on the creativity and problem-solving that coding offers.
+            I had the opportunity to do an internship at <a>DTT - multimedia</a>, where I gain valuable knowledege 
+            and experience in the field.Right now I am living in Leiden - The Netherlands, and working as a freelancer, where I
+            have the freedom to bring my clients' ideas to life through code.
             <br />
             <br />
 
-            Besides that, my goal is to embrace a new challenge, so I am looking for an opportunity
+            My goal is to embrace a new challenge, so I am looking for an opportunity
             to bring my skills and enthusiasm to a forward-thinking company. I'm eagerly seeking
             opportunities to contribute to a dynamic team.
             <br />
             <br />
             If you're in search of a dedicated developer with a passion for continuous learning and
             that love a challenge, I'd love to connect! I'm always up for a chat and eager to
-            explore how I can contribute to your team. Let's build something great together!
+            explore how I can contribute to your team!
           </p>
         </base-card>
       </div>
       <div class="button">
-        <base-button> Download CV </base-button>
+        <a href="/Cristina-Kelly-CV.pdf" download="Cristina-Kelly-CV.pdf">
+          <base-button> Download CV </base-button>
+        </a>
       </div>
     </base-width>
   </section>
@@ -63,7 +64,7 @@ import BaseButton from './common/BaseButton.vue';
 }
 
 .about-section--image {
-  flex: 0 1 20%;
+  flex: 0 1 30%;
   width: pxToRem(350);
   position: relative;
   z-index: 100;
@@ -85,7 +86,7 @@ import BaseButton from './common/BaseButton.vue';
 }
 
 .about-section--text {
-  flex: 0 1 70%;
+  flex: 0 1 60%;
   text-align: justify;
 }
 

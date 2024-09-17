@@ -7,7 +7,7 @@
         <p class="description">{{ description }}</p>
         <div class="button-wrapper">
           <base-button class="button-website" @click="redirectTo('website')">View website</base-button>
-          <base-button class="button-repo"  @click="redirectTo('code')">View Github Repo</base-button>
+          <!-- <base-button class="button-repo"  @click="redirectTo('code')">View Github Repo</base-button> -->
         </div>
       </div>
     </div>
@@ -141,10 +141,6 @@ onMounted(() => {
 
     &-description{
       gap: pxToRem(5);
-
-      .button-website, .button-repo{
-        padding: pxToRem(5) pxToRem(10);
-      }
     }
   }
 }
