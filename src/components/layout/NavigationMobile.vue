@@ -22,12 +22,6 @@
             }">
             <base-button>Projects</base-button>
           </li>
-          <li @click="() => {
-            isMenuOpen = false;
-            router.push({ name: 'home' })
-            }">
-            <base-button>Contact</base-button>  
-          </li>
         </ul>
       </div>
     </transition>

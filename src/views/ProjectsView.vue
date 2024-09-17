@@ -36,7 +36,7 @@ import TheFooter from '@/components/layout/TheFooter.vue'
     background-color: $color-primary;
     width: 100%;
     padding: pxToRem(20);
-    }
+  }
 
   .project-wrapper {
     padding: pxToRem(20);

@@ -8,9 +8,9 @@
 @import '@/assets/scss/main.scss';
 
 button {
-  border: pxToRem(2) solid $color-secondary-shade;
-  box-shadow: 0 0 pxToRem(10) rgba(0, 0, 0, 0.1);
-  background-color: rgba($color-secondary-shade, 0.639);
+  border: none;
+  box-shadow: pxToRem(4) pxToRem(4) 0 0 rgba(0, 0, 0, 0.322);
+  background-color: $color-secondary;
   border-radius: pxToRem(5);
   color: $pure-white;
   display: inline-block;

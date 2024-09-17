@@ -11,9 +11,6 @@
           <RouterLink :to="{name: 'projects'}" class="navigation-link">
             <li>Projects</li>
           </RouterLink>
-          <li class="navigation-link">
-            <a href="#contact">Contact</a>
-          </li>
         </ul>
       </nav>
       <NavigationMobile v-else />
@@ -55,6 +52,7 @@ header {
     align-items: center;
     gap: pxToRem(90);
     font-weight: 500;
+    margin-right: pxToRem(150);
 
     & li {
       position: relative;
