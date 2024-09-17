@@ -1,8 +1,8 @@
 <template>
   <section class="section-hero">
     <div class="section-hero__container">
-      <p>Welcome</p>
-      <h1>I'm Cristina Kelly</h1>
+      <!-- <p>Welcome</p> -->
+      <h1>Cristina Kelly</h1>
       <p class="section-hero__job">Front-End Developer</p>
     </div>
   </section>
@@ -13,7 +13,7 @@
 
 .section-hero {
   height: 100vh;
-  background-image: url('@/assets/images/hero-img.png');
+  background-image: url('@/assets/images/hero-img-3.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,7 +36,7 @@
 
     &::before {
       content: '';
-      border: pxToRem(2) solid $color-secondary;
+      border: pxToRem(2) solid $pure-white;
       height: 50%;
       width: 50%;
       max-width: pxToRem(1300);
@@ -44,10 +44,12 @@
       top: 50%;
       right: 50%;
       transform: translate(50%, -50%);
+      opacity: 0; // Initially hidden
+      animation: slide-in-left 1s ease forwards;
     }
     &::after {
       content: '';
-      border: pxToRem(2) solid $color-secondary;
+      border: pxToRem(2) solid $pure-white;
       height: 50%;
       width: 50%;
       max-width: pxToRem(1300);
@@ -55,15 +57,39 @@
       top: 45%;
       right: 48%;
       transform: translate(48%, -34%);
+      opacity: 0; // Initially hidden
+      animation: slide-in-right 1s ease forwards 0.3s; // Delayed to make it slide after ::before
     }
   }
 
   &__job {
-    background: linear-gradient(to right, $color-secondary, $color-primary);
-    margin-top: pxToRem(10);
-    box-shadow: pxToRem(2) pxToRem(2) pxToRem(18.5) rgba($color-text, 0.25);
-    padding: pxToRem(5) pxToRem(8);
-    border-radius: pxToRem(5);
+    color: $color-text;
+    font-weight: 600;
+    font-family: $secondary-font-family;
+  }
+}
+
+// Animations
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-150%); // Start off-screen to the left
+    opacity: 0;
+  }
+  100% {
+    transform: translate(50%, -50%); // Slide into view
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(150%); // Start off-screen to the right
+    opacity: 0;
+  }
+  100% {
+    transform: translate(48%, -34%); // Slide into view
+    opacity: 1;
   }
 }
 

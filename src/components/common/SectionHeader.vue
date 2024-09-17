@@ -7,8 +7,8 @@
 
 <script setup lang="ts">
 defineProps({
-  headingColor: { type: String, default: 'color-text' },
-  subHeadingColor: { type: String, default: 'color-text' }
+  headingColor: { type: String, default: 'white' },
+  subHeadingColor: { type: String, default: 'white' }
 })
 </script>
 
@@ -26,12 +26,12 @@ defineProps({
   }
 
   h1 {
-    color: $dark-green;
+    // color: $dark-green;
     font-weight: 500;
   }
 
-  .primary {
-    color: $color-primary;
+  .secondary {
+    color: $color-secondary-shade;
   }
 
   .white {

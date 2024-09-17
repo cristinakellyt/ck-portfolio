@@ -77,7 +77,7 @@ import BaseButton from './common/BaseButton.vue';
     content: '';
     height: 100%;
     width: 100%;
-    border: pxToRem(4) solid $dark-green;
+    border: pxToRem(4) solid $color-secondary-shade;
     position: absolute;
     top: pxToRem(-15);
     right: pxToRem(-15);
@@ -90,8 +90,9 @@ import BaseButton from './common/BaseButton.vue';
 }
 
 .button {
-  text-align: end;
   margin-top: pxToRem(40);
+  margin-left: auto;
+  width: max-content;
   transition: all 0.2s ease-in;
 
   &:hover {
@@ -124,7 +125,8 @@ import BaseButton from './common/BaseButton.vue';
   }
 
   .button {
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 </style>

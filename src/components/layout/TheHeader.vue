@@ -5,15 +5,12 @@
 
       <nav v-if="screenSizeStore.isDesktop">
         <ul class="navigation-list">
-          <li class="navigation-link">
-            <a href="#about-me">About me</a>
-          </li>
-          <li class="navigation-link">
-            <a href="#skills">Skills</a>
-          </li>
-          <li class="navigation-link">
-            <a href="#projects">Projects</a>
-          </li>
+          <RouterLink :to="{name: 'home'}" class="navigation-link">
+            <li>Home</li>
+          </RouterLink>
+          <RouterLink :to="{name: 'projects'}" class="navigation-link">
+            <li>Projects</li>
+          </RouterLink>
           <li class="navigation-link">
             <a href="#contact">Contact</a>
           </li>
@@ -37,6 +34,7 @@ const screenSizeStore = useScreenSizeStore()
 header {
   background-color: $color-primary;
   width: 100%;
+  border-bottom: pxToRem(1) solid #6c6baa;
 }
 
 .header-desktop {
@@ -52,6 +50,7 @@ header {
   }
 
   .navigation-list {
+    margin-left: auto;
     display: flex;
     align-items: center;
     gap: pxToRem(90);
@@ -83,7 +82,7 @@ header {
       display: inline-block;
       width: 0%;
       height: pxToRem(2);
-      background-color: $color-secondary;
+      background-color: $color-secondary-shade;
       position: absolute;
       bottom: -5px;
       left: 50%;
