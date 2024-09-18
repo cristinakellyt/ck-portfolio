@@ -6,8 +6,7 @@
         <img class="project-card-image" :src="image" />
         <p class="description">{{ description }}</p>
         <div class="button-wrapper">
-          <base-button class="button-website" @click="redirectTo('website')">View website</base-button>
-          <!-- <base-button class="button-repo"  @click="redirectTo('code')">View Github Repo</base-button> -->
+          <base-button class="button-website" @click="redirectTo">View website</base-button>
         </div>
       </div>
     </div>
@@ -30,10 +29,6 @@ const props = defineProps(
       type: String,
       required: true
     },
-    repoUrl: {
-      type: String,
-      required: true
-    },
     image: {
       type: String,
       required: true
@@ -45,12 +40,8 @@ const props = defineProps(
   }
 )
 
-const redirectTo = (type: String) => {
-  if(type === 'website'){
-    window.open(props.website, '_blank')
-  } else {
-    window.open(props.repoUrl, '_blank')
-  }
+const redirectTo = () => {
+  window.open(props.website, '_blank')
 }
 
 const isVisible = ref(false)
@@ -116,7 +107,6 @@ onMounted(() => {
     
 
       .description{
-        font-size: pxToRem(16);
         margin: pxToRem(10) 0 pxToRem(20) 0;
       }
 

@@ -11,8 +11,7 @@
         :key="project.name"
         :name="project.name"
         :description="project.description"
-        :website="project.website"  
-        :repoUrl="project.repoUrl"
+        :website="project.website"
         :image="project.image"
         :isInverted="index % 2 !== 0 ? true : false"
         />

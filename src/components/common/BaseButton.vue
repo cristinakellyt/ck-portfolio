@@ -18,6 +18,7 @@ button {
   transition: all 0.3s ease-in;
   cursor: pointer;
   font-weight: 600;
+  font-size: inherit;
   width: 100%;
 
   &:hover{

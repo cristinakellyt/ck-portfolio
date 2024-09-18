@@ -7,50 +7,42 @@
       </section-header>
 
       <div class="skills-grid">
-        <div class="skill-item">
-          <img src="@/assets/icons/html.svg" />
-          <p>HTML</p>
-        </div>
-        <div class="skill-item">
-          <img src="@/assets/icons/css.svg" />
-          <p>CSS</p>
-        </div>
-        <div class="skill-item">
-          <img src="@/assets/icons/scss.svg" />
-          <p>SCSS</p>
-        </div>
-        <div class="skill-item">
-          <img src="@/assets/icons/javascript.svg" />
-          <p>Javascript</p>
-        </div>
-        <div class="skill-item">
-          <img src="@/assets/icons/typescript.svg" />
-          <p>Typescript</p>
-        </div>
-        <div class="skill-item">
-          <img src="@/assets/icons/vue.svg" />
-          <p>Vue3.js</p>
-        </div>
-        <div class="skill-item">
-          <img src="@/assets/icons/screens.svg" />
-          <p>Responsive Designs</p>
-        </div>
-        <div class="skill-item">
-          <img src="@/assets/icons/node.svg" />
-          <p>Node.js</p>
-        </div>
-        <div class="skill-item">
-          <img src="@/assets/icons/git.svg" />
-          <p>Git</p>
-        </div>
-        <div class="skill-item">
-          <img src="@/assets/icons/api.svg" />
-          <p>RESTful API</p>
+        <div class="skill-item" v-for="(skill, index) in skills" :key="index" ref="skillItems">
+          <img :src="skill.icon" />
+          <p>{{ skill.name }}</p>
         </div>
       </div>
     </base-width>
   </section>
 </template>
+
+<script setup lang="ts">
+import { onMounted, ref } from 'vue'
+import skills from '@/constants/SkillsContent.js'
+
+const skillItems = ref<HTMLDivElement[]>([])
+console.log(skillItems.value)
+onMounted(() => {
+  const observerOptions = {
+    root: null, // Use the viewport
+    threshold: 0.4 // Trigger when 40% of the skill item is in view
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('active')
+        }, index * 120)
+      } else {
+        entry.target.classList.remove('active')
+      }
+    })
+  }, observerOptions)
+
+  skillItems.value.forEach((skill) => observer.observe(skill))
+})
+</script>
 
 <style scoped lang="scss">
 @import '@/assets/scss/main.scss';
@@ -81,10 +73,18 @@
   gap: pxToRem(10);
   font-weight: 500;
   transition: all 0.3s;
+  opacity: 0.2;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   p {
     transition: all 0.3s;
-    opacity: 0.7;
+    opacity: 0.8;
     font-size: pxToRem(20);
   }
 }
