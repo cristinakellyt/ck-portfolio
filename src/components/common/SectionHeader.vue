@@ -26,7 +26,7 @@ defineProps({
   }
 
   h1 {
-    // color: $dark-green;
+    // color: $color-primary-shade;
     font-weight: 500;
   }
 

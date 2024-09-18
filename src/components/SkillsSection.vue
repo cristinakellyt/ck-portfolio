@@ -21,7 +21,7 @@ import { onMounted, ref } from 'vue'
 import skills from '@/constants/SkillsContent.js'
 
 const skillItems = ref<HTMLDivElement[]>([])
-console.log(skillItems.value)
+
 onMounted(() => {
   const observerOptions = {
     root: null, // Use the viewport

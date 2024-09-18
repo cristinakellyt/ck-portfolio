@@ -8,7 +8,7 @@
 @import '@/assets/scss/main.scss';
 
 .base-card {
-  background-color: $light-green;
+  background-color: $color-primary-light;
   padding: pxToRem(15);
   border-radius: pxToRem(5);
   box-shadow: $default-box-shadow;

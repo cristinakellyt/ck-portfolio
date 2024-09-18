@@ -8,7 +8,7 @@
 
       <div class="contact-page--content">
         <div class="contact-page--text">
-          <p> Let's make something great together! </p>
+          <p>Let's make something great together!</p>
           <div class="contact-wrapper">
             <a href="https://github.com/cristinakellyt">
               <img src="@/assets/icons/github.svg" alt="contact-github" />
@@ -16,29 +16,44 @@
             <a href="https://www.linkedin.com/in/cristina-gaiao/">
               <img src="@/assets/icons/linkedin.svg" alt="contact-linkedin" />
             </a>
-            
           </div>
         </div>
         <div class="contact-page--form">
           <form class="form" action="https://formspree.io/f/xwpejjgl" method="POST">
             <div class="form-group">
-              <input class="form-input" id="name" type="text" placeholder="Your name" name="name" required />
+              <input
+                class="form-input"
+                id="name"
+                type="text"
+                placeholder="Your name"
+                name="name"
+                required
+              />
               <label class="form-label" for="name"> Your name </label>
             </div>
             <div class="form-group">
-              <input class="form-input" id="email" type="email" placeholder="Your e-mail" name="email" required />
+              <input
+                class="form-input"
+                id="email"
+                type="email"
+                placeholder="Your e-mail"
+                name="email"
+                required
+              />
               <label class="form-label" for="email"> Your e-mail </label>
             </div>
             <div class="form-group">
-              <textarea class="form-textarea"
-               id="message"
-               placeholder="Message"
-               name="message"
-               required
-               rows="5" />
+              <textarea
+                class="form-textarea"
+                id="message"
+                placeholder="Message"
+                name="message"
+                required
+                rows="5"
+              />
               <label class="form-label" for="message"> Message </label>
             </div>
-            
+
             <base-button class="submit-button" type="submit"> Send e-mail</base-button>
           </form>
         </div>
@@ -47,8 +62,7 @@
   </section>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
 @import '@/assets/scss/main.scss';
@@ -105,17 +119,18 @@
           opacity: 0;
           font-size: pxToRem(14);
           font-family: $secondary-font-family;
-          color:$pure-white;
+          color: $pure-white;
           transition: all 0.2s ease-in-out;
         }
 
-        &-input, &-textarea {
+        &-input,
+        &-textarea {
           height: pxToRem(48);
           width: 100%;
           border: none;
           border-radius: pxToRem(4);
           padding: pxToRem(12);
-          border-bottom: pxToRem(3) solid $light-green;
+          border-bottom: pxToRem(3) solid $color-primary-light;
           line-height: pxToRem(19);
           margin-bottom: pxToRem(24);
           transition: all 0.2s ease-in-out;
@@ -147,23 +162,20 @@
 
         .submit-button {
           width: 25%;
-          margin-left: auto
+          margin-left: auto;
         }
       }
     }
   }
 }
 
-
 @include media-query($tablet) {
   .contact-page {
-    
-    
     .contact-page--content {
       grid-template-columns: 1fr;
       gap: pxToRem(48);
 
-      .contact-page--form{
+      .contact-page--form {
         .form .submit-button {
           width: 100%;
         }

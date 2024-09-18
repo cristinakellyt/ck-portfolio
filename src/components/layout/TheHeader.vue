@@ -3,17 +3,25 @@
     <base-width class="header-desktop">
       <h1 class="header-desktop--logo">Cristina Kelly</h1>
 
-      <nav v-if="screenSizeStore.isDesktop">
+      <nav>
         <ul class="navigation-list">
-          <RouterLink :to="{name: 'home'}" class="navigation-link">
+          <RouterLink
+            :to="{ name: 'home' }"
+            class="navigation-link"
+            v-if="screenSizeStore.isDesktop || !homePageActive"
+          >
             <li>Home</li>
           </RouterLink>
-          <RouterLink :to="{name: 'projects'}" class="navigation-link">
+          <RouterLink
+            :to="{ name: 'projects' }"
+            class="navigation-link"
+            v-if="screenSizeStore.isDesktop || homePageActive"
+          >
             <li>Projects</li>
           </RouterLink>
         </ul>
       </nav>
-      <NavigationMobile v-else />
+      <!-- <NavigationMobile v-else /> -->
     </base-width>
   </header>
 </template>
@@ -21,8 +29,21 @@
 <script setup lang="ts">
 import { useScreenSizeStore } from '@/stores/screenSizeStore'
 import NavigationMobile from '@/components/layout/NavigationMobile.vue'
+import { useRoute } from 'vue-router'
+import { ref, watch } from 'vue'
 
+const route = useRoute()
+
+const homePageActive = ref(true)
 const screenSizeStore = useScreenSizeStore()
+
+watch(
+  () => route.name,
+  (newName) => {
+    homePageActive.value = newName === 'home'
+  },
+  { immediate: true }
+)
 </script>
 
 <style scoped lang="scss">
@@ -105,6 +126,10 @@ header {
     &--logo {
       z-index: 1000;
     }
+
+    .navigation-list {
+      margin-right: pxToRem(40);
+    }
   }
 }
 
@@ -114,6 +139,11 @@ header {
   }
   .header-logo {
     font-size: pxToRem(30);
+  }
+  .header-desktop {
+    .navigation-list {
+      margin-right: pxToRem(40);
+    }
   }
 }
 </style>
