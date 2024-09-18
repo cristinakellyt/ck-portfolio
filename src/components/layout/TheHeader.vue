@@ -21,7 +21,6 @@
           </RouterLink>
         </ul>
       </nav>
-      <!-- <NavigationMobile v-else /> -->
     </base-width>
   </header>
 </template>
