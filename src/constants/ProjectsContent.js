@@ -1,9 +1,9 @@
-import imgCheckWeather from '@/assets/images/projects/check_weather2.png'
-import imgEntertainment from '@/assets/images/projects/movie_app1.png'
-import imgPomodoro from '@/assets/images/projects/pomodoro1.png'
-import imgHouseCompany from '@/assets/images/projects/house_listing1.png'
-import imgChargeGuard from '@/assets/images/projects/charge_guard2.png'
-import imgSummaryCard from '@/assets/images/projects/summary_card1.png'
+import imgCheckWeather from '@/assets/images/projects/check_weather2.webp'
+import imgEntertainment from '@/assets/images/projects/movie_app1.webp'
+import imgPomodoro from '@/assets/images/projects/pomodoro1.webp'
+import imgHouseCompany from '@/assets/images/projects/house_listing1.webp'
+import imgChargeGuard from '@/assets/images/projects/charge_guard2.webp'
+import imgSummaryCard from '@/assets/images/projects/summary_card1.webp'
 
 const projectCardContent = [
   {
