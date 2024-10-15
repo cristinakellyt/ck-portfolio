@@ -13,7 +13,7 @@
 
 .section-hero {
   height: 100vh;
-  background-image: url('@/assets/images/hero-img-3.png');
+  background-image: url('@/assets/images/hero-img-3.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

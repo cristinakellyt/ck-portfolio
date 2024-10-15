@@ -9,7 +9,7 @@ import BaseButton from './common/BaseButton.vue';
 
       <div class="about-section--container">
         <div class="about-section--image">
-          <img src="@/assets/images/cristina-picture.jpg" alt="Cristina's photo" />
+          <img src="@/assets/images/cristina-picture.webp" alt="Cristina's photo" />
         </div>
         <base-card class="about-section--text">
           <p>
@@ -21,15 +21,16 @@ import BaseButton from './common/BaseButton.vue';
             <br />
             <br />
 
-            I had the opportunity to do an internship at <a>DTT - multimedia</a>, where I gain valuable knowledege 
-            and experience in the field.Right now I am living in Leiden - The Netherlands, and working as a freelancer, where I
-            have the freedom to bring my clients' ideas to life through code.
+            I had the opportunity to do an internship at <a>DTT - multimedia</a>, where I gain
+            valuable knowledege and experience in the field. Right now I am living in Leiden - The
+            Netherlands, and working as a freelancer, where I have the freedom to bring my clients'
+            ideas to life through code.
             <br />
             <br />
 
-            My goal is to embrace a new challenge, so I am looking for an opportunity
-            to bring my skills and enthusiasm to a forward-thinking company. I'm eagerly seeking
-            opportunities to contribute to a dynamic team.
+            My goal is to embrace a new challenge, so I am looking for an opportunity to bring my
+            skills and enthusiasm to a forward-thinking company. I'm eagerly seeking opportunities
+            to contribute to a dynamic team.
             <br />
             <br />
             If you're in search of a dedicated developer with a passion for continuous learning and
