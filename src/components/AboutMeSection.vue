@@ -1,4 +1,3 @@
-import BaseButton from './common/BaseButton.vue';
 <template>
   <section class="about-section" id="about-me">
     <base-width>
@@ -38,11 +37,6 @@ import BaseButton from './common/BaseButton.vue';
             explore how I can contribute to your team!
           </p>
         </base-card>
-      </div>
-      <div class="button">
-        <a href="/Cristina-Kelly-CV.pdf" download="Cristina-Kelly-CV.pdf">
-          <base-button> Download CV </base-button>
-        </a>
       </div>
     </base-width>
   </section>
@@ -91,21 +85,6 @@ import BaseButton from './common/BaseButton.vue';
   text-align: justify;
 }
 
-.button {
-  margin-top: pxToRem(40);
-  margin-left: auto;
-  width: max-content;
-  transition: all 0.2s ease-in;
-
-  &:hover {
-    transform: translateY(-3px);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-}
-
 @include media-query($laptop-medium) {
   .about-section--container {
     flex-direction: column;
@@ -124,11 +103,6 @@ import BaseButton from './common/BaseButton.vue';
 
   .about-section--image {
     width: pxToRem(250);
-  }
-
-  .button {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 </style>
